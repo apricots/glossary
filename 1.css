@@ -1,42 +1,16 @@
-#top, #bottom, #left, #right {
-  background: #5BA5A3;
-  position: fixed;
-}
-
-#left, #right {
-  top: 0; bottom: 0;
-  width: 15px;
-  }
-  
-#left { 
-  left: 0; 
-}
-
-#right { 
-  right: 0; 
-}
-  
-#top, #bottom {
-  left: 0; right: 0;
-  height: 15px;
-}
-
-#top { 
-  top: 0; 
-}
-
-#bottom { 
-  bottom: 0; 
-}
-
-.glossary-content {
-  margin-left: 10px;
-
+html, body {
+  margin: 0;
+  padding: 0;
 }
 
 body {
   background-color: #F2F2EF;
   font-family: 'Roboto', sans-serif;
+  border: 10px solid #5BA5A3;
+}
+
+.clearfix {
+  clear: both;
 }
 
 .title {
@@ -45,29 +19,17 @@ body {
   padding-top: 10px;
 }
 
-.html-term{
-  float: left;
-  width: 40%;
-}
-
-.css-term {
-  float: right;
-  width: 40%;
-}
-
-.js-term {
-  float: left;
-  width: 40%;
-}
-
 .row {
-  display: inline-block;
   width: 100%;
 }
 
 .term {
-  margin: 20px;
-  padding: 10px;
+  margin: 5px 2%;
+}
+
+.column {
+  width: 50%;
+  float: left;
 }
 
 .bullets {
@@ -78,10 +40,36 @@ body {
 
 .term-title {
   padding: 10px;
-  background-color: #5BA5A3; 
+/*  background-color: #5BA5A3;*/ 
   text-align: center;
+  letter-spacing: 2px;
+  background: repeating-linear-gradient(
+  45deg,
+  #F3E2A9,
+  #F3E2A9 10px,
+  #F5ECCE 10px,
+  #F5ECCE 20px
+  )
 }
 
 .border {
   border: dashed 1px;
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 480px) {
+
+.border {
+  border: dashed 1px #7A7A7A;
+}
+
+  .column {
+    width: 100%;
+  }
+
+  body {
+    border: 10px solid #F3E2A9;
+  }
+
+
 }
